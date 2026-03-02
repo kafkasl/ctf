@@ -1,0 +1,5 @@
+POST /wp-admin/admin-ajax.php HTTP/1.1
+Host: 0x06.0ffsec.com
+Content-Type: application/x-www-form-urlencoded
+
+action=w2dc_controller_request&hash=e5d47824e4fcfb7ab0345a0c7faaa5d2&ajax_action=search&order_by=post_date&order=DESC

