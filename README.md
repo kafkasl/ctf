@@ -54,6 +54,11 @@ All 21 teams share the same AWS account. Using the cloud access from Phase 3, fi
 ```
 .
 ├── NOTES.md                    # Detailed writeup — phases, commands, flags, AWS details
+├── steering_analysis.md        # Human-AI collaboration analysis (see below)
+├── session_raw.jsonl           # Full pi conversation tree — every message, tool call,
+│                               #   tool result, branch rewind (2.6MB, JSONL format)
+├── timeline_raw.txt            # Flattened chronological log — user/assistant text only,
+│                               #   truncated to 200-500 chars per message (147K)
 │
 ├── exploits/                   # Attack scripts
 │   ├── inject.py               # Webshell payload generator (plugin editor format)
@@ -76,7 +81,7 @@ All 21 teams share the same AWS account. Using the cloud access from Phase 3, fi
 │       └── plugin_editor.html  # Plugin editor (hello.php)
 │
 ├── wordlists/                  # Password lists used for cracking
-│   ├── rockyou.txt             # Classic leaked password list (14M entries)
+│   ├── rockyou.txt              # Not included — get it from https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
 │   ├── top10k.txt              # Top 10k common passwords
 │   ├── passwords.txt           # Small custom list (common defaults)
 │   └── quick.txt               # CTF-targeted wordlist (Schneider, sectf, etc.)
@@ -102,6 +107,19 @@ All 21 teams share the same AWS account. Using the cloud access from Phase 3, fi
 - **curl** — HTTP requests, cookie management, webshell interaction
 - **AWS CLI** — S3 enumeration, App Runner tagging (run from inside the compromised container)
 - **pi** (Claude Code) — AI coding agent that wrote the exploits, automated enumeration, and ran the attack chain interactively
+
+## Human-AI Collaboration Analysis
+
+This CTF was run entirely through [pi](https://github.com/mariozechner/pi-coding-agent) (Claude Code in a terminal). The human steered the AI across 4 conversation branches over ~75 minutes of active play.
+
+**`steering_analysis.md`** breaks down every human intervention and rates its impact. Key findings:
+
+- **2 interventions were critical** — providing the correct URL (only a human at the venue could know `0ffsec` vs `offsec`) and reframing the approach ("designed for humans, there must be a trick" → AI Googled the CVE instead of blind fuzzing)
+- **~20% of interventions were harmful** — interrupting running tools, misdirecting away from the correct approach
+- **AI autonomy scaled with context** — Phase 1 needed 45 min of heavy steering; Phases 3-4 needed zero steering and completed in 5 min combined
+- **The AI cracked the hash but didn't notice for 15 minutes** — the most interesting failure mode
+
+**`session_raw.jsonl`** is the full conversation tree (JSONL, one object per line) for anyone who wants to dissect the raw interaction. It includes every tool call, full command output, branch rewinds, and timestamps. Load it with any JSON parser — each line is a self-contained object with `type`, `id`, `parentId`, and `timestamp` fields.
 
 ## Key CVE
 
