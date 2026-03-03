@@ -2,7 +2,7 @@
 
 Today I attended a catch-the-flag (CTF) competition with the intention to let my coding agent [Pi](https://github.com/badlogic/pi-mono) do everything because I have no idea about cybersecurity. Pi won the competition and smoked the second place team by a large margin.
 
-After we won the competition I spent some time actually learning what the agent did and whether my contribution stering it was useful.
+After we won the competition I spent some time actually learning what the agent did and whether my contribution steering it was useful.
 
 
 ![win](win-pict.jpg)[^1]
@@ -11,28 +11,28 @@ After we won the competition I spent some time actually learning what the agent 
 
 ## About Me
 
-In order to frame what comes next, I want to state upfront that I have never worked in cybersecurity but I am a software engineer. I know what a DDoS attack is, what privilege scalation means and some basic security pratices. I have worked in many small startups where knowing some small security stuff is useful. To be honest I've always found cybersecurity uninteresting and dull. My attitude coming into the event was to push Pi to the max and see what it could do w/o me knowing anything.
+In order to frame what comes next, I want to state upfront that I have never worked in cybersecurity but I am a software engineer. I know what a DDoS attack is, what privilege scalation means and some basic security pratices. I have worked in many small startups where knowing some small security stuff is useful. To be honest I've always found cybersecurity uninteresting and dull. I can't imagine myself staring at the screen for hours trying to poke holes into someone's server. My attitude coming into the event was to push Pi to the max and see what it could do w/o me knowing anything and paying little attention.
 
 ## The Competition
 
 The competition itself was a beginner-friendly offensive security CTF by Schneider Electric at XPRO Barcelona. 21 teams each get an identical WordPress site on AWS and 90 minutes to chain four attacks: exploit a SQL injection to extract credentials, use those to get code execution on the server, pivot into the cloud infrastructure to steal data from private storage, and finally race other teams to tag each other's AWS resources.
 
-## ?
+## The Solution
 
 Pi solved ALL the puzzles (no other team did). You can read all the details in the repo but it basically:
 
-1. SQL Injection — Identified the vulnerable plugin (CVE-2024-3552), crafted error-based injection
+1. Phase I SQL Injection — Identified the vulnerable plugin (CVE-2024-3552), crafted error-based injection
 payloads with hex encoding to bypass input escaping, and extracted the password hash and hidden flag from
 the database.
-2. Code Execution — Cracked the admin password hash using a dictionary attack, logged into WordPress, and
+2. Phase II Code Execution — Cracked the admin password hash using a dictionary attack, logged into WordPress, and
 overwrote an unused plugin file with a PHP webshell via the built-in editor.
-3. Cloud Pivot — Dumped environment variables to discover it was running on AWS, fetched IAM credentials
+3. Phase III Cloud Pivot — Dumped environment variables to discover it was running on AWS, fetched IAM credentials
 from the container metadata endpoint, enumerated S3 buckets, and decoded a base64 flag hidden inside a
 PDF.
-4. PvP Tagging — Enumerated all teams' App Runner services via the AWS API and wrote a Python script to
+4. Phase IV PvP Tagging — Enumerated all teams' App Runner services via the AWS API and wrote a Python script to
 mass-tag all 20 other teams' resources through the webshell.
 
-Now the question after finishing was, did I actually help? Did my steering help or did it just slow Pi down?
+It is clear Pi did a great job. Now the question after finishing was, did I actually help? Did my steering help or did it just slow Pi down?
 
 ### Total Contributions
 
@@ -52,9 +52,9 @@ Phase 4: Zero steering needed
          ~3 minutes, AI solo
 ```
 
-As you can see, I spent almost 45 minutes w/o any results, I was thinking we would not be able to solve the first puzzle at all. To be honest, part of that was spent setting up the connection and setup of the competition. Once that was done Pi went away and started some initial generic recon.
+As you can see, I spent almost 45 minutes w/o any results, I was thinking we would not be able to solve the first puzzle at all. To be honest, part of that was spent setting up the connection and setup of the competition. Once that was done Pi went away and started some initial generic recon (which already identified one of the flags required in Phase I).
 
-I also spent some time trying to understand the problem. Initially I just copy pasted the instructions from the organizers and tell Pi to do it. But the actual submission files required were not specified, I did not know what we were doing or looking for. In this phase my steering was quite useless. 
+I also spent some time trying to understand the problem. Initially I just copy pasted the instructions from the organizers and tell Pi to do it. But I didn't pass all the context because I hadn't properly opened the actual webpage challenge. I just took a picture of the physical instructions, transcribed it, and put it in a empty folder for Pi.
 
 
 | Impact | Count | Examples |
@@ -132,8 +132,23 @@ Being able to ask Pi to just look at the whole conversation and help me summariz
 
 It is possible that a very skilled hacker could have done better, but at least there wasn't today. I find it fascinating how far agents are coming and specially how pleasant it is to work with Pi. With an harness w/o all the bloat from CC, full access to the logs, lightning fast performance, and superb context management tools.
 
-Defintely recommended.
+Definitely recommended.
 
+## Update:
+First of all the model used throughout was Opus 4.6. Multiple people pointed out that the model itself, not Pi, was the one actually doing the work. In part I do agree, but I highlighted Pi specifically for the following reasons.
+
+First, another partner of the team attempted similar stuff using ChatGPT 5.2 and had some preliminary success. My intuition is that both Opus, 5.2 and probably Gemini could have been the brain of the harness successfully.
+Second reason is that I specifically attempted this challenge because I felt so comfortable with Pi ergonomics. I have not used Claude Code for at least a month and a half and I've never enjoyed it as much. I would not have enrolled in the competition with CC so in a way, the win is for Pi.
+
+I'm pretty sure I could configure CC with yolo mode to be closer to Pi. CC has hidden tokens that might make it slower, but probably that would not be a blocker either. However, the fact is that I would go "out of the recommended & safeway" of building with CC to achieve these results. If I had not used Pi first, I would not know what it is that I'd like. 
+
+Designing interfaces that are this smooth and pleasant to use is very hard. Unfortunately, the result is that often you don't notice that. The interface gets out of the way, so in a sense it becomes transparent and it is easy to discount this importance. 
+
+In this regard, Pi is an extension of my will and capabilities as much as the model itself. Using a car metaphor, if Opus is the engine Pi would be the car tires. While you could argue that the engine is the one winning the carrace, I would definitely not have attempted to drive this race with different tires (i.e. harness like Codex or CC) but I would have definitely try it out with a different engine (i.e. 5.2, Gemini). That is what lead me to give all the merits to Pi rather than the actual model.
+
+PS: if you want the full conversation tree for further analysis or out of curiosity write to me
+
+Reach me on X: [https://x.com/pol_avec](https://x.com/pol_avec)
 
 **[Full repo: github.com/kafkasl/ctf](https://github.com/kafkasl/ctf)**
 - [`NOTES.md`](https://github.com/kafkasl/ctf/blob/main/NOTES.md) — full technical writeup with commands, flags, and AWS details
