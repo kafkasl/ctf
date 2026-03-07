@@ -1,5 +1,9 @@
 # SECTF2026 — "You Play the CTF. We Play Defense"
 
+This is the accompanying repo for the Medium Post [I Brought an AI to a Hacking Contest (and Won)
+](https://medium.com/@pol.avec/i-brought-an-ai-to-a-hacking-contest-and-won-a8c9998745c9) reporting my experience in the event were I got the first prize.
+
+
 **Event:** XPRO @ Talent Arena Barcelona, March 2 2026
 **Organizer:** Schneider Electric
 **Team:** 0x06
